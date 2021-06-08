@@ -1,0 +1,38 @@
+{
+	"name": "FastClassifier",
+	"version": "0.0.8",
+	"author": "zhuwen",
+	"category": "Image",
+	"subCategory": "Image Classifier",
+	"description": "A machine learning model that has been trained to recognize object in images.",
+	"license": "MIT",
+	"languageType": "python",
+    "continueTrainSupport": true,
+	"resourceTypes":["png","jpg","jpeg"],
+	"type": "pretrained",
+	"show": [{
+			"type": "Input",
+			"description": "Max Iteration",
+			"value": 20,
+			"placeholder": "Max Iteration",
+			"key": "epoch"
+		},
+		{
+			"type": "CheckBox",
+			"description": "Quantization",
+			"value": true,
+			"key": "quant",
+			"format": "bool"
+		}
+	],
+	"modelDev": {
+		"args": {
+			"scriptPath": "wbtrain.py"
+		}
+	},
+	"predict": {
+		"args": {
+			"scriptPath": "wbpredict.py"
+		}
+	}
+}

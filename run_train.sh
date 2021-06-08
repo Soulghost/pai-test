@@ -1,0 +1,16 @@
+#--last_fixed_layer_name "MobilenetV2/expanded_conv_16/depthwise/Relu6" \
+#--last_fixed_layer_name "MobilenetV3/expanded_conv_14/add" \
+#--pretrain_model "./pretrain_model/mb3.mnn" \
+python3 ./train.py \
+--pretrain_model "./pretrain_model/mb3.mnn" \
+--class_number 4 \
+--epoch 20 \
+--last_fixed_layer_name "MobilenetV3/expanded_conv_14/add" \
+--input_layer_name "input" \
+--log_number 10 \
+--model_type 'mobilenetv3' \
+--data_dir ./dataset/example/test/images/ \
+--train_label ./dataset/example/train/train_label.txt \
+--val_data_path ./dataset/example/test/images/ \
+--test_label ./dataset/example/test/test_label.txt \
+--test_data_path ./dataset/example/test/images/0 \

@@ -1,0 +1,7 @@
+# jupyrer server
+ipython==7.9.0
+ipykernel==4.10.1
+
+numpy==1.18.0
+opencv-python==4.2.0.32
+MNN==1.0.6
